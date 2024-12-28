@@ -1,0 +1,48 @@
+.footer {
+  padding: 20px;
+  color: var(--footer-text-color); /* Use CSS variables for theme compatibility */
+  background-color: var(--footer-bg-color); /* Dynamically set theme colors */
+}
+
+.footer .row {
+  display: flex;
+  justify-content: space-between; /* Spread links and socials to edges */
+  align-items: center; /* Vertically center content */
+  margin-bottom: 20px;
+}
+
+.footer .links {
+  display: flex;
+  gap: 10px; /* Spacing between links */
+}
+
+.footer .links a {
+  color: inherit; /* Use the same color as the parent */
+  text-decoration: none;
+}
+
+.footer .socials {
+  display: flex;
+  gap: 10px; /* Spacing between social icons */
+}
+
+.footer .socials img {
+  width: 24px;
+  height: 24px;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+.acknowledgements {
+  margin-top: 20px;
+}
+
+.acknowledgements div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.acknowledgements img {
+  width: 40px;
+  margin-right: 10px;
+}
