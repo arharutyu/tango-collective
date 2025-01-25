@@ -1,0 +1,107 @@
+/* =================================================================================================
+    Hero
+   ================================================================================================= */
+
+/* =================================================================================================
+    Art of Connecting
+   ================================================================================================= */
+.carousel-card {
+  width: 400px;
+  height: 400px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-card-photo {
+  height: 75%; /* Top 3/4 of the card */
+}
+
+.carousel-card-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-card-text {
+  height: 25%; /* Bottom 1/4 of the card */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+}
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mySwiper {
+  padding: 0 30px; /* Adds padding to the left and right */
+}
+
+.swiper-slider {
+  /* No need for margin or custom width here */
+  width: 100%; /* Ensure each slide takes up the full width of the container */
+}
+
+/* =================================================================================================
+    Card Section
+   ================================================================================================= */
+
+/* =================================================================================================
+    Private Class
+   ================================================================================================= */
+
+/* =================================================================================================
+    Community
+   ================================================================================================= */
+
+/* =================================================================================================
+    FAQ
+   ================================================================================================= */
+
+/* Ensure the FAQ container stretches across the entire page */
+.faq-container {
+  background-image: url('/FAQ.jpg');  /* Add your image path */
+  background-size: cover;  /* Ensures the image covers the whole container */
+  background-position: center;  /* Centers the image */
+  min-height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5%; /* Optional horizontal padding to prevent the content from touching the edges */
+}
+
+/* Inner content for the FAQ section */
+.faq-inner {
+  max-width: 800px;  /* Restrict the width for better readability */
+  width: 100%;
+  border-radius: 8px;  /* Optional: Rounded corners for inner container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Optional: Shadow for depth */
+}
