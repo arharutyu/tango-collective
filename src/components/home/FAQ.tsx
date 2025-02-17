@@ -15,22 +15,25 @@ const FAQ = () => {
     { question: "Does Tango have a syllabus like Ballroom?", text: "" },
   ];
   return (
-    <div className="faq-container">
-      <div className="faq-inner">
-        {FAQs.map((faq, ind) => (
-          <Accordion key={ind}>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1-content"
-              id="panel1-header"
-            >
-              <Typography component="span">{faq.question}</Typography>
-            </AccordionSummary>
-            <AccordionDetails>{faq.text}</AccordionDetails>
-          </Accordion>
-        ))}
+    <>
+      <div className="faq-container">
+        <Typography component="h1">Frequently Asked Questions</Typography>
+        <div className="faq-inner">
+          {FAQs.map((faq, ind) => (
+            <Accordion key={ind}>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1-content"
+                id="panel1-header"
+              >
+                <Typography component="span">{faq.question}</Typography>
+              </AccordionSummary>
+              <AccordionDetails>{faq.text}</AccordionDetails>
+            </Accordion>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
