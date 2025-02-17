@@ -1,10 +1,11 @@
-import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "./home.css";
 // Import Swiper styles
+// @ts-expect-error not sure why it cant recognize cos it works
 import "swiper/css";
+// @ts-expect-error not sure why it cant recognize cos it works
 import "swiper/css/pagination";
 
 // import required modules
@@ -13,11 +14,11 @@ import CarouselCard from "./CarouselCard";
 
 const ArtOfConnecting = () => {
   const cards = [
-    { photo: "/carousel/CorporateTango.png", text: "Card 1 Text" },
-    { photo: "/carousel/IntermediateWorkshops.jpg", text: "Card 2 Text" },
-    { photo: "/carousel/Show.png", text: "Card 3 Text" },
-    { photo: "/carousel/SocialDance.jpg", text: "Card 4 Text" },
-    { photo: "/carousel/TangoForAll.jpg", text: "Card 5 Text" },
+    { photo: "/carousel/CorporateTango.png", text: { title: "Card 1 Text", subtitle: "Subtitle", text: "Card 1 Text" } },
+    { photo: "/carousel/IntermediateWorkshops.jpg", text: { title: "Card 2 Text", subtitle: "Subtitle", text: "Card 2 Text" } },
+    { photo: "/carousel/Show.png", text: { title: "Card 3 Text", subtitle: "Subtitle", text: "Card 3 Text" } },
+    { photo: "/carousel/SocialDance.jpg", text: { title: "Card 4 Text", subtitle: "Subtitle", text: "Card 4 Text" } },
+    { photo: "/carousel/TangoForAll.jpg", text: { title: "Card 5 Text", subtitle: "Subtitle", text: "Card 5 Text" } },
   ];
 
   return (
