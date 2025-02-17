@@ -1,3 +1,5 @@
+
+
 /* =================================================================================================
     Hero
    ================================================================================================= */
@@ -7,17 +9,18 @@
    ================================================================================================= */
 .carousel-card {
   width: 400px;
-  height: 400px;
+  height: 300px;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: white;
   display: flex;
   flex-direction: column;
+  justify-self: center;
 }
 
 .carousel-card-photo {
-  height: 75%; /* Top 3/4 of the card */
+  height: 200px; /* Top 3/4 of the card */
 }
 
 .carousel-card-photo img {
@@ -27,16 +30,22 @@
 }
 
 .carousel-card-text {
-  height: 25%; /* Bottom 1/4 of the card */
+  height: 100px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 10px;
   font-size: 16px;
-  color: #333;
+  color: #fff;
   text-align: center;
+  background-color: var(--primary-color);
 }
 
+.carousel-card-text p {
+  font-size: 1rem;
+  margin: 0;
+}
 
 .swiper {
   width: 100%;
@@ -46,7 +55,6 @@
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
 
   /* Center slide text vertically */
   display: flex;
@@ -88,7 +96,7 @@
 
 /* Ensure the FAQ container stretches across the entire page */
 .faq-container {
-  background-image: url('/FAQ.jpg');  /* Add your image path */
+  background-image: url('/FAQ.jpg');
   background-size: cover;  /* Ensures the image covers the whole container */
   background-position: center;  /* Centers the image */
   min-height: 35vh;
@@ -96,6 +104,7 @@
   justify-content: center;
   align-items: center;
   padding: 0 5%; /* Optional horizontal padding to prevent the content from touching the edges */
+  flex-direction: column;  /* Stack the header and accordion vertically */
 }
 
 /* Inner content for the FAQ section */
@@ -104,4 +113,11 @@
   width: 100%;
   border-radius: 8px;  /* Optional: Rounded corners for inner container */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Optional: Shadow for depth */
+}
+
+.faq-container h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 20px;  /* Adds some space between the header and the accordion */
 }
