@@ -4,18 +4,21 @@ import PrivateClass from "../components/home/PrivateClass";
 import CardSection from "../components/home/CardSection";
 import Community from "../components/home/Community";
 import FAQ from "../components/home/FAQ";
+import Stack from "@mui/material/Stack";
 
 const Home = () => {
-  return (
-    <>
-      <Hero />
-      <ArtOfConnecting />
-      <CardSection />
-      <PrivateClass />
-      <Community />
-      <FAQ />
-    </>
-  );
+    return (
+        <>
+            <Stack spacing={2}>
+                <Hero/>
+                <ArtOfConnecting/>
+                <CardSection/>
+                <PrivateClass/>
+                <Community/>
+                <FAQ/>
+            </Stack>
+        </>
+    );
 };
 
 export default Home;
