@@ -1,5 +1,6 @@
 import React from 'react';
-import './home.css'; // Import the CSS file
+import './home.css';
+import Typography from "@mui/material/Typography";
 
 const CarouselCard: React.FC<{ photo: string; text: { title: string; subtitle: string; text: string } }> = ({
                                                                                                                 photo,
@@ -14,9 +15,9 @@ const CarouselCard: React.FC<{ photo: string; text: { title: string; subtitle: s
 
             {/* Text Section */}
             <div className="carousel-card-text">
-                <p>{text.title}</p> {/* Display the title */}
-                <p>{text.subtitle}</p> {/* Display the subtitle */}
-                <p>{text.text}</p> {/* Display the main text */}
+                <Typography variant="h3">{text.title}</Typography>
+                <Typography variant="h5">{text.subtitle}</Typography>
+                <Typography variant="body1">{text.text}</Typography>
             </div>
         </div>
     );
