@@ -27,7 +27,6 @@ const Community = () => {
                     backgroundPosition: "center",
                     width: "100vw",
                     maxHeight: "500px",
-                    height: "400px",
                     overflow: "hidden", // Ensures content doesn't overflow
                     display: "flex", // Using flexbox for content positioning
                     flexDirection: "column", // Stacking items vertically
