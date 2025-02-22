@@ -178,6 +178,8 @@
 .faq-container > * {
   position: relative; /* Ensure content is above the overlay */
   z-index: 2; /* Content should appear above the overlay */
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 /* Inner content for the FAQ section */
