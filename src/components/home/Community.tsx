@@ -14,171 +14,183 @@ const FEEDBACK = [
         text: "Marce is a patience and knowledgeable teacher. Her teachings have enriched my dance skills and confidence",
         from: "Noune & Vahram"
     }
-]
-const Community = () => {
-    return (<>
-        <div
-            style={{
-                position: "relative", // Enables absolute positioning of child elements
-                backgroundImage: "url(/Community.jpg)",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                width: "100vw",
-                maxHeight: "500px",
-                height: "400px", // Fixed or dynamic height based on your preference
-                overflow: "hidden", // Ensures content doesn't overflow
-            }}
-        >
-            {/* The Typography for the title */}
-            <Typography
-                variant="huge"
-                style={{
-                    position: "absolute", // Absolute positioning relative to the parent div
-                    top: "20%",
-                    left: "50%", // Center horizontally
-                    transform: "translate(-50%, -50%)", // Ensure centering works
-                    color: "white", // Ensures white text stands out
-                    textAlign: "center",
-                }}
-            >
-                Join our Community
-            </Typography>
+];
 
-            {/* The icon/logo container */}
+const Community = () => {
+    return (
+        <>
             <div
                 style={{
-                    display: "flex", // Align children horizontally
-                    justifyContent: "space-around", // Spreads out icons evenly
-                    alignItems: "center", // Align items vertically
-                    position: "absolute", // Positioned relative to parent
-                    bottom: "20%", // Positioned near the bottom
-                    left: "50%",
-                    transform: "translateX(-50%)", // Center horizontally
-                    width: "60%", // Controls width for positioning of logos
+                    position: "relative", // Container for background image
+                    backgroundImage: "url(/Community.jpg)",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    width: "100vw",
+                    maxHeight: "500px",
+                    height: "400px",
+                    overflow: "hidden", // Ensures content doesn't overflow
+                    display: "flex", // Using flexbox for content positioning
+                    flexDirection: "column", // Stacking items vertically
+                    justifyContent: "center", // Vertically center content
+                    alignItems: "center", // Horizontally center content
+                    paddingTop: "30px", // Adds space at the top for mobile
+                    height: "auto",
+                    minHeight: "350px"
                 }}
             >
-                {/* Icon 1 */}
-                <div
-                    style={{
-                        width: "100px",
-                        height: "100px",
-                        borderRadius: "50%", // Makes it circular
-                        overflow: "hidden", // Ensures the image stays within a circle
-                        background: "rgba(89, 0, 0, 0.8)", // A red translucent background
-                        display: "flex", // Center the image inside
-                        justifyContent: "center",
-                        alignItems: "center",
-                        backdropFilter: "blur(10px)", // Blurs the background for a subtle effect
+                {/* The Typography for the title */}
+                <Typography
+                    variant="h2" // Adjusted to use an appropriate size
+                    sx={{
+                        color: "white",
+                        textAlign: "center",
+                        fontWeight: "bold",
+                        marginBottom: "20px", // Adds some margin below the text
                     }}
                 >
-                    <img
-                        src="/partners/MelbourneTangoClub.png"
-                        alt="Partner 1"
-                        style={{
-                            width: "80%", // Scale the image relative to container
-                            height: "80%",
-                            objectFit: "contain", // Ensures image maintains proportions
-                            opacity: "0.8", // Slight transparency
-                        }}
-                    />
-                </div>
+                    Join our Community
+                </Typography>
 
-                {/* Icon 2 */}
-                <div
-                    style={{
-                        width: "100px",
-                        height: "100px",
-                        borderRadius: "50%", // Makes the element circular
-                        overflow: "hidden",
-                        background: "rgba(0, 0, 0, 0.3)", // A black translucent background
+                {/* The icon/logo container */}
+                <Box
+                    sx={{
                         display: "flex",
-                        justifyContent: "center",
+                        justifyContent: "space-around",
                         alignItems: "center",
-                        backdropFilter: "blur(10px)", // Blurs the background
+                        width: "60%",
+                        flexDirection: { xs: "column", sm: "row" }, // Flex column on small screens, row on medium+
+                        gap: 2, // Adds space between icons
+                        marginBottom: '30px'
                     }}
                 >
-                    <img
-                        src="/partners/MTS.png"
-                        alt="Partner 2"
+                    {/* Icon 1 */}
+                    <div
                         style={{
-                            width: "80%",
-                            height: "80%",
-                            objectFit: "contain",
-                            opacity: "0.8",
-                        }}
-                    />
-                </div>
-
-                {/* Icon 3 */}
-                <div
-                    style={{
-                        width: "100px",
-                        height: "100px",
-                        borderRadius: "50%", // Makes the element circular
-                        overflow: "hidden",
-                        background: "rgba(0, 0, 0, 0.3)", // A black translucent background
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        backdropFilter: "blur(10px)", // Blurs the background
-                    }}
-                >
-                    <img
-                        src="/partners/TangoEventsAu.webp"
-                        alt="Partner 3"
-                        style={{
-                            width: "80%",
-                            height: "80%",
-                            objectFit: "contain",
-                            opacity: "0.8",
-                        }}
-                    />
-                </div>
-            </div>
-        </div>
-
-        <Box className="community-feedback" sx={{textAlign: "center"}}>
-            <Typography variant="h3" sx={{mt: "48px"}}>
-                What we’re hearing from our students and colleages
-            </Typography>
-
-            <Box
-                sx={{
-                    width: "100%",
-                    display: "grid",
-                    gap: "16px", // Space between items
-                    padding: "3em",
-                    justifyContent: "center", // Centers the grid itself
-                    gridTemplateColumns: {
-                        xs: "1fr", // 1 item per row (extra-small)
-                        sm: "1fr", // 1 item per row (small)
-                        md: "repeat(2, 1fr)", // 2 items per row (medium)
-                        lg: "repeat(3, 1fr)", // 3 items per row (large)
-                    },
-                    placeItems: "center", // Centers children within grid cells
-                }}
-            >
-                {FEEDBACK.map(({text, from}, index) => (
-                    <Box
-                        key={index}
-                        sx={{
-                            borderRadius: "8px",
-                            textAlign: "left",
-                            maxWidth: "250px"
+                            width: "100px",
+                            height: "100px",
+                            borderRadius: "50%", // Makes it circular
+                            overflow: "hidden",
+                            background: "rgba(89, 0, 0, 0.8)",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            backdropFilter: "blur(10px)",
                         }}
                     >
-                        <Typography variant="body1" sx={{fontStyle: "italic", color: "var(--text-primary-color)"}}>
-                            {text}
-                        </Typography>
-                        <Typography variant="body1" sx={{fontStyle: "italic", color: "var(--text-primary-color)"}}>
-                            <strong>- {from}</strong>
-                        </Typography>
-                    </Box>
-                ))}
-            </Box>
+                        <img
+                            src="/partners/MelbourneTangoClub.png"
+                            alt="Partner 1"
+                            style={{
+                                width: "80%",
+                                height: "80%",
+                                objectFit: "contain",
+                                opacity: "0.8",
+                            }}
+                        />
+                    </div>
 
-        </Box>
-    </>);
+                    {/* Icon 2 */}
+                    <div
+                        style={{
+                            width: "100px",
+                            height: "100px",
+                            borderRadius: "50%",
+                            overflow: "hidden",
+                            background: "rgba(0, 0, 0, 0.3)",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            backdropFilter: "blur(10px)",
+                        }}
+                    >
+                        <img
+                            src="/partners/MTS.png"
+                            alt="Partner 2"
+                            style={{
+                                width: "80%",
+                                height: "80%",
+                                objectFit: "contain",
+                                opacity: "0.8",
+                            }}
+                        />
+                    </div>
+
+                    {/* Icon 3 */}
+                    <div
+                        style={{
+                            width: "100px",
+                            height: "100px",
+                            borderRadius: "50%",
+                            overflow: "hidden",
+                            background: "rgba(0, 0, 0, 0.3)",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            backdropFilter: "blur(10px)",
+                        }}
+                    >
+                        <img
+                            src="/partners/TangoEventsAu.webp"
+                            alt="Partner 3"
+                            style={{
+                                width: "80%",
+                                height: "80%",
+                                objectFit: "contain",
+                                opacity: "0.8",
+                            }}
+                        />
+                    </div>
+                </Box>
+            </div>
+
+            <Box className="community-feedback" sx={{ textAlign: "center" }}>
+                <Typography variant="h3" sx={{ mt: "48px" }}>
+                    What we’re hearing from our students and colleagues
+                </Typography>
+
+                <Box
+                    sx={{
+                        width: "100%",
+                        display: "grid",
+                        gap: "16px",
+                        padding: "3em",
+                        justifyContent: "center",
+                        gridTemplateColumns: {
+                            xs: "1fr",
+                            sm: "1fr",
+                            md: "repeat(2, 1fr)",
+                            lg: "repeat(3, 1fr)",
+                        },
+                        placeItems: "center",
+                    }}
+                >
+                    {FEEDBACK.map(({ text, from }, index) => (
+                        <Box
+                            key={index}
+                            sx={{
+                                borderRadius: "8px",
+                                textAlign: "left",
+                                maxWidth: "250px",
+                            }}
+                        >
+                            <Typography
+                                variant="body1"
+                                sx={{ fontStyle: "italic", color: "var(--text-primary-color)" }}
+                            >
+                                {text}
+                            </Typography>
+                            <Typography
+                                variant="body1"
+                                sx={{ fontStyle: "italic", color: "var(--text-primary-color)" }}
+                            >
+                                <strong>- {from}</strong>
+                            </Typography>
+                        </Box>
+                    ))}
+                </Box>
+            </Box>
+        </>
+    );
 };
 
 export default Community;

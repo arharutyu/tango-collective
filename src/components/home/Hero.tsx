@@ -1,4 +1,5 @@
 import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 
 const Hero = () => {
     return (
@@ -13,49 +14,49 @@ const Hero = () => {
             }}
         >
             {/* Text in top-right */}
-            <div
-                style={{
+            <Box
+                sx={{
                     position: "absolute",
                     top: "40px", // Adjust as needed for vertical positioning
                     right: "40px", // Adjust as needed for horizontal positioning
                     zIndex: 1, // Ensures text is above the image
                     color: "black", // Text color
-                    textAlign: "right"
+                    textAlign: "right",
+                    display: { xs: "none", md: "block" }, // Only visible from 'md' breakpoint and larger
                 }}
             >
-                <Typography variant="hero" style={{ fontWeight: "bold" }}>
+                <Typography variant="hero" sx={{ fontWeight: "bold" }}>
                     Tango, the art to
                 </Typography><br />
-                <Typography variant="hero" style={{ fontWeight: "bold" }}>
+                <Typography variant="hero" sx={{ fontWeight: "bold" }}>
                     connect with
                 </Typography><br />
-
-                <Typography variant="hero" style={{ fontWeight: "bold" }}>
+                <Typography variant="hero" sx={{ fontWeight: "bold" }}>
                     others and
                 </Typography><br />
-
-                <Typography variant="hero" style={{ fontWeight: "bold" }}>
+                <Typography variant="hero" sx={{ fontWeight: "bold" }}>
                     oneself
                 </Typography>
-            </div>
+            </Box>
 
             {/* Main Content */}
-            <div
-                style={{
+            <Box
+                sx={{
                     position: "absolute",
                     bottom: 0,
                     width: "100%",
                     backgroundColor: "rgba(0, 0, 0, 0.6)", // 60% transparent black
                     color: "white",
                     display: "flex",
+                    flexDirection: { xs: "column", md: "row" }, // Flex column on xs and sm, flex row on md+
                     padding: "20px",
                 }}
             >
-                <div style={{ flex: 1, padding: "10px" }}>
+                <Box sx={{ flex: 1, padding: "10px" }}>
                     <Typography variant="h1">Why Tango</Typography>
-                </div>
+                </Box>
 
-                <div style={{ flex: 3, padding: "10px" }}>
+                <Box sx={{ flex: 3, padding: "10px" }}>
                     <Typography variant="h5" component="p">
                         Tango is a partner dance that allows us to connect with our body and
                         with the person we are dancing with. It is a dance of mutual
@@ -72,8 +73,8 @@ const Hero = () => {
                     <Typography variant="h5" component="p">
                         Come along and discover your endless potential!
                     </Typography>
-                </div>
-            </div>
+                </Box>
+            </Box>
         </div>
     );
 };
