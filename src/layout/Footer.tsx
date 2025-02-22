@@ -52,18 +52,18 @@ const Footer = () => {
       {/* Acknowledgments spanning the full width */}
       <div className="acknowledgements">
         <div>
-          <img src="/path-to-flag1.png" />
+          <img src="/FLAGS/Australian_Aboriginal_Flag.svg" />
           <p>
             We respectfully acknowledge the Traditional Custodians of Country
             throughout Australia.
           </p>
         </div>
         <div>
-          <img src="/path-to-flag2.png" />
+          <img src="/FLAGS/Flag_of_the_Torres_Strait_Islanders.svg.png" />
           <p>We pay our respects to Elders past, present and emerging.</p>
         </div>
         <div>
-          <img src="/path-to-flag3.png" />
+          <img src="/FLAGS/gay-flag-svgrepo-com.svg" />
           <p>
             At The Tango Collective, we welcome and support the LGBTIQ+
             Community.
