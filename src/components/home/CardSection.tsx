@@ -3,8 +3,8 @@ import { Box } from "@mui/material";
 
 const CardSection = () => {
   const cards = [
-    { icon: "/src/assets/BiggerPurpose.svg", header: "A bigger purpose", text: "As any other social dancing, Tango serves our community by connecting one another. Through the tango embrace we can learn to listen and understand those around us and build a strong sense of community. As a global movement, Tango has brought many people a purpose and a sense of identity. Join us and be part of this beautiful way to learn more about yourself, connect with others and exercise." },
-    { icon: "/src/assets/UniqueExperience.svg", header: "A unique experience", text: "By engaging with The Tango Collective, besides learning the codes to navigate the tango world in a respectful way, you will be able to access to a bigger community, even to the extend to meet emblematic Tango places around the world." },
+    { icon: "/BiggerPurpose.svg", header: "A bigger purpose", text: "As any other social dancing, Tango serves our community by connecting one another. Through the tango embrace we can learn to listen and understand those around us and build a strong sense of community. As a global movement, Tango has brought many people a purpose and a sense of identity. Join us and be part of this beautiful way to learn more about yourself, connect with others and exercise." },
+    { icon: "/UniqueExperience.svg", header: "A unique experience", text: "By engaging with The Tango Collective, besides learning the codes to navigate the tango world in a respectful way, you will be able to access to a bigger community, even to the extend to meet emblematic Tango places around the world." },
   ];
   
   return (

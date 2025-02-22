@@ -159,9 +159,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 5%; /* Optional horizontal padding to prevent the content from touching the edges */
   flex-direction: column;  /* Stack the header and accordion vertically */
   position: relative; /* Ensure the overlay is positioned correctly */
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .faq-container::before {
@@ -178,8 +179,6 @@
 .faq-container > * {
   position: relative; /* Ensure content is above the overlay */
   z-index: 2; /* Content should appear above the overlay */
-  padding-top: 40px;
-  padding-bottom: 40px;
 }
 
 /* Inner content for the FAQ section */
