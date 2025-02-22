@@ -1,6 +1,20 @@
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
+const FEEDBACK = [
+    {
+        text: "Marce’s experience in tango have given our group a new perspective about how to engage in a partner dance and how preserve the community values in a dancing context.",
+        from: "Tango on the Bay"
+    },
+    {
+        text: "Working with Marce has enabled school students to understand better the tango codes and commence their tango journey with confidence and joy.",
+        from: "La Encantada Collective"
+    },
+    {
+        text: "Marce is a patience and knowledgeable teacher. Her teachings have enriched my dance skills and confidence",
+        from: "Noune & Vahram"
+    }
+]
 const Community = () => {
     return (<>
         <div
@@ -37,7 +51,7 @@ const Community = () => {
                     justifyContent: "space-around", // Spreads out icons evenly
                     alignItems: "center", // Align items vertically
                     position: "absolute", // Positioned relative to parent
-                    bottom: "10%", // Positioned near the bottom
+                    bottom: "20%", // Positioned near the bottom
                     left: "50%",
                     transform: "translateX(-50%)", // Center horizontally
                     width: "60%", // Controls width for positioning of logos
@@ -124,75 +138,45 @@ const Community = () => {
         </div>
 
         <Box className="community-feedback" sx={{textAlign: "center"}}>
-            <Typography variant="h3" sx={{ mt: "48px", mb: "48px" }}>
+            <Typography variant="h3" sx={{mt: "48px"}}>
                 What we’re hearing from our students and colleages
             </Typography>
 
-            <div
-                style={{
-                    width: "80%", // Width of the entire feedback section
-                    display: "flex",
-                    justifyContent: "space-between", // Evenly space out the feedback areas
-                    alignItems: "center",
+            <Box
+                sx={{
+                    width: "100%",
+                    display: "grid",
+                    gap: "16px", // Space between items
+                    padding: "3em",
+                    justifyContent: "center", // Centers the grid itself
+                    gridTemplateColumns: {
+                        xs: "1fr", // 1 item per row (extra-small)
+                        sm: "1fr", // 1 item per row (small)
+                        md: "repeat(2, 1fr)", // 2 items per row (medium)
+                        lg: "repeat(3, 1fr)", // 3 items per row (large)
+                    },
+                    placeItems: "center", // Centers children within grid cells
                 }}
             >
-                {/* Feedback quote 1 */}
-                <Box
-                    style={{
-                        width: "30%", // Each feedback area takes 30% of the width
-                        background: "rgba(255, 255, 255, 0.8)", // Slightly transparent white background
-                        borderRadius: "8px", // Rounded corners
-                        padding: "10px 15px", // Inner padding
-                        boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)", // Shadow for better contrast
-                        textAlign: "center", // Center-align text
-                    }}
-                >
-                    <Typography
-                        variant="body1"
-                        style={{ fontStyle: "italic", color: "#333" }}
+                {FEEDBACK.map(({text, from}, index) => (
+                    <Box
+                        key={index}
+                        sx={{
+                            borderRadius: "8px",
+                            textAlign: "left",
+                            maxWidth: "250px"
+                        }}
                     >
-                        "This community is amazing! Highly recommended."
-                    </Typography>
-                </Box>
+                        <Typography variant="body1" sx={{fontStyle: "italic", color: "var(--text-primary-color)"}}>
+                            {text}
+                        </Typography>
+                        <Typography variant="body1" sx={{fontStyle: "italic", color: "var(--text-primary-color)"}}>
+                            <strong>- {from}</strong>
+                        </Typography>
+                    </Box>
+                ))}
+            </Box>
 
-                {/* Feedback quote 2 */}
-                <Box
-                    style={{
-                        width: "30%",
-                        background: "rgba(255, 255, 255, 0.8)",
-                        borderRadius: "8px",
-                        padding: "10px 15px",
-                        boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
-                        textAlign: "center",
-                    }}
-                >
-                    <Typography
-                        variant="body1"
-                        style={{ fontStyle: "italic", color: "#333" }}
-                    >
-                        "I've met incredible people here!"
-                    </Typography>
-                </Box>
-
-                {/* Feedback quote 3 */}
-                <Box
-                    style={{
-                        width: "30%",
-                        background: "rgba(255, 255, 255, 0.8)",
-                        borderRadius: "8px",
-                        padding: "10px 15px",
-                        boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
-                        textAlign: "center",
-                    }}
-                >
-                    <Typography
-                        variant="body1"
-                        style={{ fontStyle: "italic", color: "#333" }}
-                    >
-                        "A perfect way to connect and engage."
-                    </Typography>
-                </Box>
-            </div>
         </Box>
     </>);
 };
