@@ -161,6 +161,23 @@
   align-items: center;
   padding: 0 5%; /* Optional horizontal padding to prevent the content from touching the edges */
   flex-direction: column;  /* Stack the header and accordion vertically */
+  position: relative; /* Ensure the overlay is positioned correctly */
+}
+
+.faq-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5); /* Transparent white with 50% opacity */
+  z-index: 1; /* Ensures the overlay is above the background but below the content */
+}
+
+.faq-container > * {
+  position: relative; /* Ensure content is above the overlay */
+  z-index: 2; /* Content should appear above the overlay */
 }
 
 /* Inner content for the FAQ section */
@@ -169,6 +186,7 @@
   width: 100%;
   border-radius: 8px;  /* Optional: Rounded corners for inner container */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Optional: Shadow for depth */
+  background: none;
 }
 
 .faq-container h1 {

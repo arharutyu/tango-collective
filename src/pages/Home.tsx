@@ -15,8 +15,8 @@ const Home = () => {
                 <CardSection/>
                 <PrivateClass/>
                 <Community/>
-                <FAQ/>
             </Stack>
+            <FAQ/> {/* outside stack to avoid weird black line between Community/FAQ caused by stack spacing + bg*/}
         </>
     );
 };

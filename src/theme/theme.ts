@@ -53,6 +53,21 @@ export const themeOptions: ThemeOptions = {
                 fontSize: '80px', // For large screens
             },
         },
+        hero: {
+            fontFamily: 'Square Peg , sans-serif',
+            fontSize: '128px',
+            fontWeight: 400,
+            lineHeight: "100px",
+            '@media (min-width:600px)': {
+                fontSize: '60px', // For tablets or small screens
+            },
+            '@media (min-width:960px)': {
+                fontSize: '70px', // For desktops
+            },
+            '@media (min-width:1280px)': {
+                fontSize: '80px', // For large screens
+            },
+        },
         h1: {
             fontSize: '48px',
             fontWeight: 700,
